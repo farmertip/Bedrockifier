@@ -7,7 +7,7 @@ set -euo pipefail
 tag=${1:-dev}
 COMMIT=${2:-main}
 PUSH=${3:-nopush}
-dockerRepo=kaiede/minecraft-bedrock-backup
+dockerRepo=farmertip/minecraft-bedrock-backup
 dockerBaseTag=$dockerRepo:${tag}
 
 arch=`arch`
