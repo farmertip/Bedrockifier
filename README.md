@@ -4,9 +4,9 @@
 ![Swift](https://img.shields.io/badge/Swift-5.6.2-brightgreen.svg?style=flat)
 [![MIT license](http://img.shields.io/badge/License-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
-[![CI Status](https://github.com/Kaiede/Bedrockifier/actions/workflows/docker.yml/badge.svg)](https://github.com/Kaiede/Bedrockifier/actions)
-[![Docker Pulls](https://img.shields.io/docker/pulls/kaiede/minecraft-bedrock-backup.svg)](https://hub.docker.com/r/kaiede/minecraft-bedrock-backup)
-[![GitHub Issues](https://img.shields.io/github/issues-raw/kaiede/Bedrockifier.svg)](https://github.com/kaiede/Bedrockifier/issues)
+[![CI Status](https://github.com/farmertip/Bedrockifier/actions/workflows/docker.yml/badge.svg)](https://github.com/farmertip/Bedrockifier/actions)
+[![Docker Pulls](https://img.shields.io/docker/pulls/farmertip/minecraft-bedrock-backup.svg)](https://hub.docker.com/r/farmertip/minecraft-bedrock-backup)
+[![GitHub Issues](https://img.shields.io/github/issues-raw/farmertip/Bedrockifier.svg)](https://github.com/farmertip/Bedrockifier/issues)
 
 ### Notice
 
