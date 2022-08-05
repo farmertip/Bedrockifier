@@ -51,8 +51,8 @@ public struct World {
             do {
                 let values = try url.resourceValues(forKeys: [.isDirectoryKey])
                 return values.isDirectory == true
-            } catch {
-                throw WorldError.invalidUrl(url: url, innerError: error)
+//            } catch {
+//                throw WorldError.invalidUrl(url: url, innerError: error)
             }
         }
     }
