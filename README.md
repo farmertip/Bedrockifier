@@ -8,7 +8,11 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/kaiede/minecraft-bedrock-backup.svg)](https://hub.docker.com/r/kaiede/minecraft-bedrock-backup)
 [![GitHub Issues](https://img.shields.io/github/issues-raw/kaiede/Bedrockifier.svg)](https://github.com/kaiede/Bedrockifier/issues)
 
+### Notice
+
 This is a crude attempt at resolving the "Unable to access world path at XXX" error when running Docker Desktop for Windows (WSL2).
+
+### Overview
 
 A multi-purpose tool for working with Minecraft Java and Bedrock world backups, including a manual tool, a backup service, and a dockerized contianer for making backups of the Minecraft [Bedrock](https://hub.docker.com/r/itzg/minecraft-bedrock-server) and [Java](https://hub.docker.com/r/itzg/minecraft-server) docker containers provided by itzg.
 
