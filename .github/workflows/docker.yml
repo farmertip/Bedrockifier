@@ -16,7 +16,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     name: Docker - linux/${{ matrix.arch }}
-    if: github.repository == 'Kaiede/Bedrockifier'
+    if: github.repository == 'farmertip/Bedrockifier'
     strategy:
       matrix:
         arch: [amd64, arm64]
@@ -53,7 +53,7 @@ jobs:
         file: ./Docker/Dockerfile
         platforms: linux/${{ matrix.arch }}
         push: ${{ github.event_name != 'pull_request' }}
-        tags: kaiede/minecraft-bedrock-backup:${{ env.docker_tag }}-${{ matrix.arch }}
+        tags: farmertip/minecraft-bedrock-backup:${{ env.docker_tag }}-${{ matrix.arch }}
         build-args: |
           QEMU_CPU=max
           arch=${{ matrix.arch }}
@@ -63,7 +63,7 @@ jobs:
   merge-tags:
     needs: ['build']
     runs-on: ubuntu-latest
-    if: github.repository == 'Kaiede/Bedrockifier' && github.event_name != 'pull_request'
+    if: github.repository == 'farmertip/Bedrockifier' && github.event_name != 'pull_request'
 
     steps:
     - name: Checkout
