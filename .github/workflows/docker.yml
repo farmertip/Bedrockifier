@@ -78,4 +78,4 @@ jobs:
 
     - name: Merge Manifests
       if: github.event_name != 'pull_request'
-      run: bash Docker/merge.sh kaiede/minecraft-bedrock-backup:${{ env.docker_tag }}
+      run: bash Docker/merge.sh farmertip/minecraft-bedrock-backup:${{ env.docker_tag }}
