@@ -39,7 +39,7 @@ public struct World {
             } else if url.pathExtension == "zip" {
                 self = .javaBackup
 //          Maybe do something here about .part files?  Not sure if necessary.
-            } else if {
+            } else {
                 let isDirectory = try WorldType.isDirectory(url: url)
                 if isDirectory {
                     self = .folder
