@@ -34,16 +34,18 @@ public struct World {
         case javaBackup
 
         init(url: URL) throws {
-            let isDirectory = try WorldType.isDirectory(url: url)
-
-            if isDirectory {
-                self = .folder
-            } else if url.pathExtension == "mcworld" {
+            if url.pathExtension == "mcworld" {
                 self = .mcworld
             } else if url.pathExtension == "zip" {
                 self = .javaBackup
-            } else {
-                throw WorldError.invalidWorldType
+//          Maybe do something here about .part files?  Not sure if necessary.
+            } else if {
+                let isDirectory = try WorldType.isDirectory(url: url)
+                if isDirectory {
+                    self = .folder
+                } else { 
+                    throw WorldError.invalidWorldType
+                }
             }
         }
 
@@ -52,8 +54,7 @@ public struct World {
                 let values = try url.resourceValues(forKeys: [.isDirectoryKey])
                 return values.isDirectory == true
             } catch {
-//                throw WorldError.invalidUrl(url: url, innerError: error)
-                return values.isDirectory == false
+                throw WorldError.invalidUrl(url: url, innerError: error)
             }
         }
     }
@@ -145,7 +146,7 @@ extension World {
 
         // We want to write to a temporary file first.
         // Write it as: "Foo.mcworld.part" or "Foo.zip.part"
-        let tempUrl = url.appendingPathExtension(World.partialPackExt)
+//        let tempUrl = url.appendingPathExtension(World.partialPackExt)
 
         guard let archive = Archive(url: tempUrl, accessMode: .create) else {
             throw WorldError.invalidLevelArchive
@@ -158,7 +159,7 @@ extension World {
         }
 
         // With it packed successfully, rename it.
-        try FileManager.default.moveItem(at: tempUrl, to: url)
+//        try FileManager.default.moveItem(at: tempUrl, to: url)
 
         return try World(url: url)
     }
